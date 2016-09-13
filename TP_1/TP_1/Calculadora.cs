@@ -9,13 +9,9 @@ namespace TP_1
     
     public class Calculadora
     {
-        /// <summary>
-        /// Realiza la operacion con los parametros y el operando pasados
-        /// </summary>
-        /// <param name="numero1">Primer numero a operar</param>
-        /// <param name="numero2">Segundo numero a operar</param>
-        /// <param name="operador">Operador(+,-,* o /)</param>
-        /// <returns>Resultado de la operacion o 0, en caso de no poder operar</returns>
+        
+       /* 
+        #region Deprecated por sobrecarga de operador
         public static double operar(Numero numero1, Numero numero2, string operador)
         {
             switch (Calculadora.validarOperador(operador))
@@ -35,6 +31,37 @@ namespace TP_1
             }
 
         }
+        #endregion
+        */
+
+        /// <summary>
+        /// Realiza la operacion con los parametros y el operando pasados
+        /// </summary>
+        /// <param name="numero1">Primer numero a operar</param>
+        /// <param name="numero2">Segundo numero a operar</param>
+        /// <param name="operador">Operador(+,-,* o /)</param>
+        /// <returns>Resultado de la operacion o 0, en caso de no poder operar</returns>
+        public static double operar(Numero numero1, Numero numero2, string operador)
+        {
+            switch (Calculadora.validarOperador(operador))
+            {
+                case "+":
+                    return (numero1 + numero2);
+                case "-":
+                    return (numero1 - numero2);
+                case "/":
+                    if (numero2.getNumero() != 0)
+                        return (numero1 / numero2);
+                    return 0;
+                case "*":
+                    return (numero1 * numero2);
+                default:
+                    return 0;
+            }
+
+        }
+
+
 
         /// <summary>
         /// Valida que el operador sea: +, -, * o /.

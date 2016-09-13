@@ -7,3 +7,12 @@ C:\Users\Bartok\Documents\workspace_utn\Prog 2\TP_1\TP_1\obj\Debug\TP_1.Properti
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TP_1\TP_1\obj\Debug\TP_1.csproj.GenerateResource.Cache
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TP_1\TP_1\obj\Debug\TP_1.exe
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\TP_1\TP_1\obj\Debug\TP_1.pdb
+D:\FR\tps\TP_1\TP_1\bin\Debug\TP_1.exe.config
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.exe
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.pdb
+D:\FR\tps\TP_1\TP_1\bin\Debug\TP_1.exe
+D:\FR\tps\TP_1\TP_1\bin\Debug\TP_1.pdb
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.csprojResolveAssemblyReference.cache
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.Form1.resources
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.Properties.Resources.resources
+D:\FR\tps\TP_1\TP_1\obj\Debug\TP_1.csproj.GenerateResource.Cache
