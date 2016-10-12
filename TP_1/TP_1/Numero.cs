@@ -65,5 +65,49 @@ namespace TP_1
             return 0;
         }
 
+        /// <summary>
+        /// Operador suma, retorna un double con el resultado de la suma
+        /// </summary>
+        /// <param name="numero1">Primer numero a sumar</param>
+        /// <param name="numero2">Segundo numero a sumar</param>
+        /// <returns></returns>
+        public static double operator +(Numero numero1, Numero numero2)
+        {
+            return (numero1.numero + numero2.numero);
+        }
+
+        /// <summary>
+        /// Operador resta, retorna un double con el resultado de la resta
+        /// </summary>
+        /// <param name="numero1">Primer numero a restar</param>
+        /// <param name="numero2">Segundo numero a restar</param>
+        /// <returns></returns>
+        public static double operator -(Numero numero1, Numero numero2)
+        {
+            return (numero1.numero - numero2.numero);
+        }
+
+        /// <summary>
+        /// Operador multiplicar, retorna un double con el resultado de la multiplicacion
+        /// </summary>
+        /// <param name="numero1">Primer numero a multiplicar</param>
+        /// <param name="numero2">Segundo numero a multiplicar</param>
+        /// <returns></returns>
+        public static double operator *(Numero numero1, Numero numero2)
+        {
+            return (numero1.numero * numero2.numero);
+        }
+
+        /// <summary>
+        /// Operador suma, retorna un double con el resultado de la division
+        /// </summary>
+        /// <param name="numero1">Dividendo</param>
+        /// <param name="numero2">Divisor</param>
+        /// <returns>Resultado de la division</returns>
+        public static double operator /(Numero numero1, Numero numero2)
+        {
+            return (numero1.numero / numero2.numero);
+        }
+
     }
 }
