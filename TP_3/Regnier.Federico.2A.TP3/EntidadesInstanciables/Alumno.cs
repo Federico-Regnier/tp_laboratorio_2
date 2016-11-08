@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntidadesAbstractas;
-using Gimnasio;
 
 namespace EntidadesInstanciables
 {
@@ -13,21 +12,22 @@ namespace EntidadesInstanciables
         public enum EEstadoCuenta
         {
             AlDia,
-            Deudor
+            Deudor,
+            MesPrueba
         }
 
-        private EClases _claseQueToma;
+        private Gimnasio.EClases _claseQueToma;
         private EEstadoCuenta _estadoCuenta;
 
         #region Constructores
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma)
             : base(id, nombre, apellido, dni, nacionalidad)
         {
             this._claseQueToma = claseQueToma;
         }
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, EClases claseQueToma, EEstadoCuenta estadoCuenta)
+        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma, EEstadoCuenta estadoCuenta)
             : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this._estadoCuenta = estadoCuenta;
@@ -46,6 +46,7 @@ namespace EntidadesInstanciables
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine(base.MostrarDatos());
+            sb.AppendLine();
             sb.AppendFormat("ESTADO DE CUENTA: {0}", this._estadoCuenta.ToString()).AppendLine();
             sb.AppendFormat("TOMA CLASES DE {0}", this._claseQueToma.ToString()).AppendLine();
 
@@ -57,14 +58,14 @@ namespace EntidadesInstanciables
             return this.MostrarDatos();
         }
 
-        public static bool operator ==(Alumno a, EClases clase)
+        public static bool operator ==(Alumno a, Gimnasio.EClases clase)
         {
             if (a._claseQueToma == clase && a._estadoCuenta != EEstadoCuenta.Deudor)
                 return true;
             return false;
         }
 
-        public static bool operator !=(Alumno a, EClases clase)
+        public static bool operator !=(Alumno a, Gimnasio.EClases clase)
         {
             if (a._claseQueToma != clase)
                 return true;

@@ -21,9 +21,9 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
             
-            sb.AppendLine(this.ToString());
+            sb.AppendLine(base.ToString());
             sb.AppendFormat("CARNET NÚMERO: {0}", this._identificador);
-
+            
             return sb.ToString();
         }
 
@@ -42,13 +42,11 @@ namespace EntidadesAbstractas
 
         public override bool Equals(object obj)
         {
-            if (obj == null)
-                return false;
-
-            PersonaGimnasio aux = obj as PersonaGimnasio;
-            if (aux != null && this == aux)
-                return true;
-
+            if (obj.GetType() == this.GetType())
+            {
+                if (this == (PersonaGimnasio)obj)
+                    return true;
+            }
             return false;
         }
 

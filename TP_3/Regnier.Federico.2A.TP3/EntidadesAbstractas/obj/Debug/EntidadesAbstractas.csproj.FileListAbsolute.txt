@@ -4,3 +4,10 @@ C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\Entidades
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesAbstractas\bin\Debug\Excepciones.pdb
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\bin\Debug\Excepciones.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\bin\Debug\Excepciones.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.csprojResolveAssemblyReference.cache
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesAbstractas\obj\Debug\EntidadesAbstractas.pdb

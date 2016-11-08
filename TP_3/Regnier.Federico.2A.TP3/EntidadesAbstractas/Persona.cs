@@ -39,29 +39,14 @@ namespace EntidadesAbstractas
 
             set
             {
-                try
-                {
-                    this._dni = this.ValidarDni(this._nacionalidad, value);
-                }
-                catch (DniInvalidoException excepction)
-                {
-                    throw excepction;
-                }
+                this._dni = this.ValidarDni(this._nacionalidad, value);
             }
         }
         public string StringToDNI
         {
             set
             {
-                try
-                {
-                    this._dni = this.ValidarDni(this.Nacionalidad, value);
-                }
-                catch (DniInvalidoException exception)
-                {
-
-                    throw exception;
-                }
+                this._dni = this.ValidarDni(this.Nacionalidad, value);
             }
         }
         private ENacionalidad _nacionalidad;
@@ -135,13 +120,13 @@ namespace EntidadesAbstractas
             {
                 case ENacionalidad.Argentino:
                     if (dato < 1 || dato > 89999999)
-                        throw new DniInvalidoException("La nacionalidad no se condice con el numero de DNI");
+                        throw new NacionalidadInvalidaException("La nacionalidad no se condice con el numero de DNI");
                     else
                         return dato;
 
                 case ENacionalidad.Extranjero:
                     if (dato < 90000000)
-                        throw new DniInvalidoException("La nacionalidad no se condice con el numero de DNI");
+                        throw new NacionalidadInvalidaException("La nacionalidad no se condice con el numero de DNI");
                     else
                         return dato;
 
@@ -157,7 +142,7 @@ namespace EntidadesAbstractas
             if (dato != null && int.TryParse(dato, out dni))
                 return this.ValidarDni(nacionalidad, dni);
 
-            throw new DniInvalidoException("El DNI no es un numero");
+            throw new DniInvalidoException("El DNI no es valido");
 
         }
 
@@ -165,8 +150,10 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("NOMBRE COMPLETO: {0}, {1}", this.Apellido, this.Nombre).AppendLine();
-            sb.AppendFormat("NACIONALIDAD: {0}", this.Nacionalidad.ToString()).AppendLine();
+            sb.AppendFormat("NOMBRE COMPLETO: {0}, {1}", this.Apellido, this.Nombre);
+            sb.AppendLine();
+            sb.AppendFormat("NACIONALIDAD: {0}", this.Nacionalidad.ToString());
+            sb.AppendLine();
 
             return sb.ToString();
         }

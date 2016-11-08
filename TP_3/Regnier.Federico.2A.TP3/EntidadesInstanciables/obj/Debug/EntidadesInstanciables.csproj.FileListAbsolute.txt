@@ -9,3 +9,15 @@ C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\Entidades
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojResolveAssemblyReference.cache
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.exe
 C:\Users\Bartok\Documents\workspace_utn\Prog 2\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojResolveAssemblyReference.cache
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\Excepciones.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\Excepciones.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\Archivos.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\Archivos.pdb
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll.config
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll
+C:\Users\Bartok\Documents\workspace_utn\Prog 2\tp_laboratorio_2\TP_3\Regnier.Federico.2A.TP3\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
