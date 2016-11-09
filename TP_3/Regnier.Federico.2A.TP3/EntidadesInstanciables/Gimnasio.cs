@@ -18,6 +18,9 @@ namespace EntidadesInstanciables
     public class Gimnasio
     {
         private List<Alumno> _alumnos;
+        /// <summary>
+        /// Propiedad get para poder serializar
+        /// </summary>
         public List<Alumno> Alumnos
         {
             get
@@ -26,6 +29,9 @@ namespace EntidadesInstanciables
             }
         }
         private List<Instructor> _instructores;
+        /// <summary>
+        /// Propiedad get para poder serializar
+        /// </summary>
         public List<Instructor> Instructores
         {
             get
@@ -34,6 +40,9 @@ namespace EntidadesInstanciables
             }
         }
         private List<Jornada> _jornada;
+        /// <summary>
+        /// Propiedad get para poder serializar
+        /// </summary>
         public List<Jornada> Jornadas
         {
             get
@@ -49,6 +58,12 @@ namespace EntidadesInstanciables
             Pilates,
             Yoga
         }
+
+        /// <summary>
+        /// Devuelve una jornada de la lista de jornadas
+        /// </summary>
+        /// <param name="i">Indice de la jornada</param>
+        /// <returns></returns>
         public Jornada this[int i]
         {
             get
@@ -60,6 +75,9 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Constructor por defecto que inicializa las listas
+        /// </summary>
         public Gimnasio()
         {
             this._alumnos = new List<Alumno>();
@@ -67,6 +85,12 @@ namespace EntidadesInstanciables
             this._jornada = new List<Jornada>();
         }
 
+        /// <summary>
+        /// Compara un gimnasio y un alumno. 
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="a">Alumno</param>
+        /// <returns>Retorna true si el alumno se encuentra en el gimnasio</returns>
         public static bool operator ==(Gimnasio g, Alumno a)
         {
             foreach (Alumno item in g._alumnos)
@@ -78,11 +102,23 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Retorna true si el alumno no se encuentra en la lista de alumnos
+        /// </summary>
+        /// <param name="g">Gimnasio donde se buscara el alumno</param>
+        /// <param name="a">Alumno a buscar</param>
+        /// <returns></returns>
         public static bool operator !=(Gimnasio g, Alumno a)
         {
             return !(g == a);
         }
 
+        /// <summary>
+        /// Retorna true si el instructor es parte del gimnasio
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="i">Instructor</param>
+        /// <returns></returns>
         public static bool operator ==(Gimnasio g, Instructor i)
         {
             foreach (Instructor item in g._instructores)
@@ -94,11 +130,23 @@ namespace EntidadesInstanciables
             return false;
         }
 
+        /// <summary>
+        /// Retorna true si el instructor no es parte del gimnasio
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="i">Instructor</param>
+        /// <returns></returns>
         public static bool operator !=(Gimnasio g, Instructor i)
         {
             return !(g == i);
         }
 
+        /// <summary>
+        /// Compara un gimnasio y una clase, devolviendo un instructor que pueda dar la clase
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="clase">Clase a dar</param>
+        /// <returns>Retorna un instructor que pueda dar la clase</returns>
         public static Instructor operator ==(Gimnasio g, EClases clase)
         {
             foreach (Instructor item in g._instructores)
@@ -110,6 +158,12 @@ namespace EntidadesInstanciables
             throw new SinInstructorException();
         }
 
+        /// <summary>
+        /// Retorna el primer instructor del gimnasio que no pueda impartir la clase
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="clase">Clase a impartir</param>
+        /// <returns></returns>
         public static Instructor operator !=(Gimnasio g, EClases clase)
         {
             foreach (Instructor item in g._instructores)
@@ -121,6 +175,12 @@ namespace EntidadesInstanciables
             return null;
         }
 
+        /// <summary>
+        /// Agrega un alumno al gimnasio salvo que ya exista
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="a">Alumno a agregar</param>
+        /// <returns></returns>
         public static Gimnasio operator +(Gimnasio g, Alumno a)
         {
             if (g == a)
@@ -130,6 +190,12 @@ namespace EntidadesInstanciables
             return g;
         }
 
+        /// <summary>
+        /// Agrega un instructor al gimnasio si no esta ya agregado
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="i">Instructor a agregar</param>
+        /// <returns></returns>
         public static Gimnasio operator +(Gimnasio g, Instructor i)
         {
             if (g == i)
@@ -139,6 +205,12 @@ namespace EntidadesInstanciables
             return g;
         }
 
+        /// <summary>
+        /// Agrega una jornada al gimnasio si hay un instructor que pueda dar la clase
+        /// </summary>
+        /// <param name="g">Gimnasio</param>
+        /// <param name="clase">Clase a agregar a la jornada</param>
+        /// <returns></returns>
         public static Gimnasio operator +(Gimnasio g, EClases clase)
         {
             try
@@ -161,6 +233,11 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Mustra los alumnos, instructores y jornadas del gimnasio
+        /// </summary>
+        /// <param name="gim"></param>
+        /// <returns></returns>
         private static string MostrarDatos(Gimnasio gim)
         {
             StringBuilder sb = new StringBuilder();
@@ -175,11 +252,20 @@ namespace EntidadesInstanciables
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Muestra los alumnos, instructores y jornadas del gimnasio
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Gimnasio.MostrarDatos(this);
         }
 
+        /// <summary>
+        /// Serializa el gimnasio pasado a un xml
+        /// </summary>
+        /// <param name="gim">Gimnasio a serializar</param>
+        /// <returns></returns>
         public static bool Guardar(Gimnasio gim)
         {
             Archivos.Xml<Gimnasio> xml = new Archivos.Xml<Gimnasio>();
@@ -187,6 +273,10 @@ namespace EntidadesInstanciables
             return xml.guardar("Gimnasio.xml", gim);
         }
 
+        /// <summary>
+        /// Lee el gimnasio de un xmly lo retorna
+        /// </summary>
+        /// <returns></returns>
         public static Gimnasio Leer()
         {
             Archivos.Xml<Gimnasio> xml = new Archivos.Xml<Gimnasio>();

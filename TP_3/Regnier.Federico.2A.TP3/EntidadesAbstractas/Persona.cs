@@ -9,6 +9,8 @@ namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
+
+
         public enum ENacionalidad
         {
             Argentino,
@@ -42,6 +44,9 @@ namespace EntidadesAbstractas
                 this._dni = this.ValidarDni(this._nacionalidad, value);
             }
         }
+        /// <summary>
+        /// Agrega el dni en formato string validandolo antes
+        /// </summary>
         public string StringToDNI
         {
             set
@@ -78,8 +83,17 @@ namespace EntidadesAbstractas
 
         #region Constructores
 
+        /// <summary>
+        /// Constructor por defecto para poder serializar el objeto
+        /// </summary>
         public Persona() { }
 
+        /// <summary>
+        /// Constructor que inicializa el nombre, apellido y nacionalidad solamente
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona</param>
+        /// <param name="apellido">Apellido de la persona</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Nombre = nombre;
@@ -87,12 +101,26 @@ namespace EntidadesAbstractas
             this.Nacionalidad = nacionalidad;
         }
 
+        /// <summary>
+        /// Constructor que inicializa los atributos
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona</param>
+        /// <param name="apellido">Apellido de la persona</param>
+        /// <param name="dni">DNI como entero</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
             this.DNI = dni;
         }
 
+        /// <summary>
+        /// Constructor que inicializa todos los atributos
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona</param>
+        /// <param name="apellido">Apellido de la persona</param>
+        /// <param name="dni">Dni como string</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
@@ -103,6 +131,11 @@ namespace EntidadesAbstractas
 
         #region Metodos
 
+        /// <summary>
+        /// Valida que el string pasado sean solo letras
+        /// </summary>
+        /// <param name="dato">String a validar como apellido</param>
+        /// <returns></returns>
         private string ValidarNombreApellido(string dato)
         {
             if (string.IsNullOrEmpty(dato))
@@ -117,6 +150,12 @@ namespace EntidadesAbstractas
             return dato;
         }
 
+        /// <summary>
+        /// Valida que el dni este entre 1 y 90000000 para argentinos y mayor para extranjeros
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona a validar el DNI</param>
+        /// <param name="dato">DNI a validar</param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             switch (nacionalidad)
@@ -138,6 +177,13 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Valida el dni pasado como string. 
+        /// Entre 1 y 90000000(exclusivo) para argentinos y mayor a 90000000 para extranjeros
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona</param>
+        /// <param name="dato">DNI a validar</param>
+        /// <returns></returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int dni;
@@ -149,6 +195,10 @@ namespace EntidadesAbstractas
 
         }
 
+        /// <summary>
+        /// Devuelve los datos de la persona como string
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

@@ -11,6 +11,12 @@ namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
+        /// <summary>
+        /// Serializa los datos del tipo pasado en un xml
+        /// </summary>
+        /// <param name="archivo">Ruta del archivo</param>
+        /// <param name="datos">Datos a ser serializados</param>
+        /// <returns></returns>
         public bool guardar(string archivo, T datos)
         {
             bool flag = false;
@@ -19,6 +25,7 @@ namespace Archivos
             {
                 using (XmlTextWriter escritor = new XmlTextWriter(archivo, Encoding.UTF8))
                 {
+                    escritor.Formatting = Formatting.Indented;
                     XmlSerializer serializador = new XmlSerializer(typeof(T));
                     serializador.Serialize(escritor, datos);
                     flag = true;
@@ -33,6 +40,12 @@ namespace Archivos
             
         }
 
+        /// <summary>
+        /// Deserializa los datos del archivo xml
+        /// </summary>
+        /// <param name="archivo">Ruta del archivo</param>
+        /// <param name="datos">Datos deserializados</param>
+        /// <returns></returns>
         public bool leer(string archivo, out T datos)
         {
             bool flag = false;

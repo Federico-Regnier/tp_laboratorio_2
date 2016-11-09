@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Excepciones
 {
+    /// <summary>
+    /// Excepcion por ingresar un DNI invalido
+    /// </summary>
     public class DniInvalidoException : Exception
     {
         private string mensajeBase;
