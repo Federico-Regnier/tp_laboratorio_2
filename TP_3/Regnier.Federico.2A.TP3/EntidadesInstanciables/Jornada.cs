@@ -11,11 +11,40 @@ namespace EntidadesInstanciables
     public class Jornada
     {
         private List<Alumno> _alumnos;
+        public List<Alumno> Alumnos
+        {
+            get
+            {
+                return this._alumnos;
+            }
+        }
         private Gimnasio.EClases _clase;
+        public Gimnasio.EClases Clase
+        {
+            get
+            {
+                return this._clase;
+            }
+            set
+            {
+                this._clase = value;
+            }
+        }
         private Instructor _instructor;
+        public Instructor Instructor
+        {
+            get
+            {
+                return this._instructor;
+            }
+            set
+            {
+                this._instructor = value;
+            }
+        }
         
         #region Constructores
-        private Jornada()
+        public Jornada()
         {
             this._alumnos = new List<Alumno>();
         }

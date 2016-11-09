@@ -101,7 +101,7 @@ namespace Main
             }
             Console.WriteLine(gim.ToString());
             Console.ReadKey();
-            /*try
+            try
             {
                 Gimnasio.Guardar(gim);
                 Console.WriteLine("Archivo de Gimnasio guardado");
@@ -120,7 +120,7 @@ namespace Main
             {
                 Console.WriteLine(e.Message);
             }
-            Console.ReadKey();*/
+            Console.ReadKey();
         }
     }
 }

@@ -1,0 +1,17 @@
+CLASE DE Natacion POR NOMBRE COMPLETO: Lopez, Juan
+NACIONALIDAD: Argentino
+
+CARNET NÚMERO: 1
+CLASES DEL DIA: 
+Pilates
+Natacion
+
+ALUMNOS: 
+NOMBRE COMPLETO: Suarez, Joaquin
+NACIONALIDAD: Extranjero
+
+CARNET NÚMERO: 7
+
+ESTADO DE CUENTA: AlDia
+TOMA CLASES DE Natacion
+<----------------------------------------->

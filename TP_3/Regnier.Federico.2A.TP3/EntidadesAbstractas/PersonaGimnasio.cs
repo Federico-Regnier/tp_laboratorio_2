@@ -10,6 +10,8 @@ namespace EntidadesAbstractas
     {
         private int _identificador;
 
+        public PersonaGimnasio() { }
+
         public PersonaGimnasio(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(nombre, apellido, dni, nacionalidad)
         {
             this._identificador = id;

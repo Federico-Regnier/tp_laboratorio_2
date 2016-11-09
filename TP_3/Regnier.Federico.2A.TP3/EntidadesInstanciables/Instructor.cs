@@ -17,6 +17,8 @@ namespace EntidadesInstanciables
             Instructor._random = new Random();
         }
 
+        public Instructor() { }
+
         public Instructor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad) : base(id, nombre, apellido, dni, nacionalidad) 
         {
             this._clasesDelDia = new Queue<Gimnasio.EClases>(2);

@@ -19,7 +19,9 @@ namespace Archivos
             {
                 using (XmlTextWriter escritor = new XmlTextWriter(archivo, Encoding.UTF8))
                 {
-                    
+                    XmlSerializer serializador = new XmlSerializer(typeof(T));
+                    serializador.Serialize(escritor, datos);
+                    flag = true;
                 }
             }
             catch (Exception e)

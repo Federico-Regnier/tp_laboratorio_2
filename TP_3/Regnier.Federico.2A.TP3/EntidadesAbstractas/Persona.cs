@@ -77,6 +77,9 @@ namespace EntidadesAbstractas
         }
 
         #region Constructores
+
+        public Persona() { }
+
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
         {
             this.Nombre = nombre;

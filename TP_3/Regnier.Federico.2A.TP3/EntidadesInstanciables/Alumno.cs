@@ -21,6 +21,8 @@ namespace EntidadesInstanciables
 
         #region Constructores
 
+        public Alumno() { }
+
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Gimnasio.EClases claseQueToma)
             : base(id, nombre, apellido, dni, nacionalidad)
         {

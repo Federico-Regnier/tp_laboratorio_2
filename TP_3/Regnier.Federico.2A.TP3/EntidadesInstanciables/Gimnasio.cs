@@ -6,17 +6,41 @@ using System.Threading.Tasks;
 using Excepciones;
 using System.Xml;
 using System.Xml.Serialization;
+using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
 {
     [XmlInclude(typeof(Alumno))]
     [XmlInclude(typeof(Instructor))]
     [XmlInclude(typeof(Jornada))]
+    [XmlInclude(typeof(Persona))]
+    [XmlInclude(typeof(PersonaGimnasio))]
     public class Gimnasio
     {
         private List<Alumno> _alumnos;
+        public List<Alumno> Alumnos
+        {
+            get
+            {
+                return this._alumnos;
+            }
+        }
         private List<Instructor> _instructores;
+        public List<Instructor> Instructores
+        {
+            get
+            {
+                return this._instructores;
+            }
+        }
         private List<Jornada> _jornada;
+        public List<Jornada> Jornadas
+        {
+            get
+            {
+                return this._jornada;
+            }
+        }
         
         public enum EClases
         {
