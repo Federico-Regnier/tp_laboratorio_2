@@ -20,6 +20,11 @@ namespace Navegador
             
         }
 
+        /// <summary>
+        /// Carga el formulario con las direcciones del archivo ARCHIVO_HISTORIAL
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmHistorial_Load(object sender, EventArgs e)
         {
             Archivos.Texto archivos = new Archivos.Texto(frmHistorial.ARCHIVO_HISTORIAL);
@@ -38,8 +43,6 @@ namespace Navegador
             {
                 
             }
-            
-            
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Archivos
 {
     public class Texto : IArchivo<string>
     {
+        // Ruta del Archivo
         private string _path;
 
         public Texto(string archivo)
@@ -16,6 +17,11 @@ namespace Archivos
             this._path = archivo;
         }
 
+        /// <summary>
+        /// Guarda el string pasado en el archivo indicado por el path
+        /// </summary>
+        /// <param name="datos">Dato a guardar</param>
+        /// <returns></returns>
         public bool guardar(string datos)
         {
             bool flag = false;
@@ -29,6 +35,11 @@ namespace Archivos
             return flag;
         }
 
+        /// <summary>
+        /// Devuelve una lista con un string por cada linea guardada en el archivo
+        /// </summary>
+        /// <param name="datos">Lista donde se guardaran los datos leidos</param>
+        /// <returns></returns>
         public bool leer(out List<string> datos)
         {
             bool flag = false;

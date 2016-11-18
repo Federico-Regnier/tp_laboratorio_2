@@ -21,9 +21,13 @@ namespace Navegador
         public frmWebBrowser()
         {
             InitializeComponent();
-                
         }
 
+        /// <summary>
+        /// Inicializa archivo con la direccion del formulario historial.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmWebBrowser_Load(object sender, EventArgs e)
         {
             this.txtUrl.SelectionStart = 0;  //This keeps the text
@@ -64,6 +68,10 @@ namespace Navegador
         }
         #endregion
 
+        /// <summary>
+        /// Actualiza la barra de progreso 
+        /// </summary>
+        /// <param name="progreso"></param>
         delegate void ProgresoDescargaCallback(int progreso);
         private void ProgresoDescarga(int progreso)
         {
@@ -77,6 +85,11 @@ namespace Navegador
                 tspbProgreso.Value = progreso;
             }
         }
+
+        /// <summary>
+        /// Carga el codigo html en el formulario
+        /// </summary>
+        /// <param name="html"></param>
         delegate void FinDescargaCallback(string html);
         private void FinDescarga(string html)
         {
@@ -93,12 +106,23 @@ namespace Navegador
             }
         }
 
+        /// <summary>
+        /// Muestra el formulario con el historial de navegacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void mostrarTodoElHistorialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmHistorial formHistorial = new frmHistorial();
             formHistorial.Show();
         }
 
+        /// <summary>
+        /// Crea un URI con la url e inicia la descarga del codigo de la pagina web.
+        /// Guarda la direccion en el archivo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIr_Click(object sender, EventArgs e)
         {
             try
